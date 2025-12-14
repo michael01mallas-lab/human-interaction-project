@@ -1,0 +1,259 @@
+/* ===========================
+   Half-Life Style MP3 Player
+   Font: 3270 Nerd Font Cond
+   Dark Grey + Orange + Blue
+   =========================== */
+
+/* Apply font to entire UI */
+.root {
+    -fx-font-family: "3270 Nerd Font Cond", "Segoe UI", sans-serif;
+}
+
+/* AnchorPane / main container background */
+.anchor-pane {
+    -fx-background-color: #1E1E1E; /* very dark grey */
+}
+
+/* Labels styled like buttons */
+.label {
+    -fx-text-fill: #FF6600;           /* orange text */
+    -fx-font-size: 20px;
+
+
+}
+
+#songLabel {
+-fx-text-fill: #FF6600;           /* orange text */
+    -fx-font-size: 20px;
+-fx-background-color: #444444;
+        -fx-text-fill: #f5a40f;
+            -fx-border-color: #f5a40f;
+
+            /* outer glow */
+            -fx-effect: dropshadow(gaussian, #f5a40f, 15, 0.7, 0, 0);
+}
+
+
+
+
+
+/* Buttons (play, pause, next, previous) */
+
+
+
+.button {
+    -fx-font-family: "3270 Nerd Font Cond", "Segoe UI Symbol", sans-serif;
+    -fx-font-size: 18px;
+    -fx-text-fill: #FF6600;
+    -fx-background-color: #333333;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #FF6600;
+    -fx-border-width: 2;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #222222;
+    -fx-text-fill: #f5a40f;
+        -fx-border-color: #f5a40f;
+
+        /* outer glow */
+        -fx-effect: dropshadow(gaussian, #f5a40f, 15, 0.7, 0, 0);
+}
+
+.button:pressed {
+    -fx-background-color: #222222;
+    -fx-border-color: #FF8800;
+}
+
+/* Base style for toggle buttons */
+.toggle-button {
+    -fx-font-family: "3270 Nerd Font Cond", "Segoe UI Symbol", sans-serif;
+    -fx-font-size: 18px;
+    -fx-text-fill: #FF6600;
+    -fx-background-color: #333333;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #FF6600;
+    -fx-border-width: 2;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
+/* Hover effect (not selected) */
+.toggle-button:hover {
+    -fx-background-color: #222222;
+    -fx-text-fill: #f5a40f;
+    -fx-border-color: #f5a40f;
+
+    /* glow */
+    -fx-effect: dropshadow(gaussian, #f5a40f, 15, 0.7, 0, 0);
+}
+
+/* Pressed (mouse down but not selected yet) */
+.toggle-button:pressed {
+    -fx-background-color: #222222;
+    -fx-border-color: #FF8800;
+}
+
+/* When the toggle is selected (ON state) */
+.toggle-button:selected {
+    -fx-background-color: #222222;
+    -fx-border-color: #f5a40f;
+    -fx-text-fill: #f5a40f;
+}
+
+/* Glow on hover while selected */
+.toggle-button:selected:hover {
+    -fx-background-color: #333333;
+    -fx-border-color: #f5a40f;
+    -fx-text-fill: #f5a40f;
+
+    -fx-effect: dropshadow(gaussian, #f5a40f, 15, 0.7, 0, 0);
+}
+
+
+
+
+
+/* ComboBox styling */
+.combo-box {
+    -fx-font-family: "3270 Nerd Font Cond", "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #333333;
+    -fx-text-fill: #FF6600;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-border-color: #FF6600;
+    -fx-border-width: 2;
+}
+
+.combo-box:hover { -fx-background-color: #444444;
+  -fx-background-color: #222222;
+      -fx-text-fill: #f5a40f;
+      -fx-border-color: #f5a40f;
+
+ }
+
+/* ComboBox popup list items */
+.combo-box .list-cell {
+    -fx-background-color: #333333;
+    -fx-text-fill: #FF6600;
+
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #444444;
+     -fx-text-fill: #FF6600;
+        -fx-text-fill: #f5a40f;
+                -fx-border-color: #f5a40f;
+
+
+}
+
+/* Sliders (volume/progress) */
+.slider .track { -fx-background-color: #444444; }
+.slider .thumb { -fx-background-color: #FF6600; -fx-background-radius: 6; }
+
+/* Progress Bar */
+.progress-bar {
+    -fx-control-inner-background: #555555; /* track background */
+    -fx-accent: #2196F3;                  /* progress fill color - blue */
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.progress-bar .track {
+    -fx-background-color: #555555;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #2196F3; /* blue progress fill */
+    -fx-background-radius: 8;
+}
+
+.progress-bar: hover{
+
+}
+
+
+.combo-box-popup .list-view .scroll-bar:vertical {
+    -fx-pref-width: 0;
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+
+.combo-box-popup .list-view .increment-arrow,
+.combo-box-popup .list-view .decrement-arrow {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+
+/* Hide the entire vertical scrollbar */
+.list-view .scroll-bar:vertical {
+    -fx-pref-width: 0;     /* no width */
+    -fx-opacity: 0;        /* invisible */
+    -fx-padding: 0;
+}
+
+/* Hide the horizontal scrollbar (if any) */
+.list-view .scroll-bar:horizontal {
+    -fx-pref-height: 0;
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+/* Remove arrow buttons */
+.list-view .scroll-bar .increment-arrow,
+.list-view .scroll-bar .decrement-arrow {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+/* Base ListView background */
+.list-view {
+    -fx-background-color: #333333;   /* dark grey */
+    -fx-border-color: #FF6600;       /* orange border */
+    -fx-border-width: 2px;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 2px;
+    -fx-font-family: "3270 Nerd Font Cond", "Segoe UI", sans-serif;
+    -fx-font-size: 16px;
+    -fx-text-fill: #FF6600;
+}
+
+/* List cells (items) */
+.list-cell {
+    -fx-background-color: #333333;
+    -fx-text-fill: #FF6600;
+    -fx-padding: 5px 10px;
+}
+
+/* Hover effect on list cell */
+.list-cell:hover {
+    -fx-background-color: #222222;
+}
+
+/* Selected cell */
+.list-cell:selected {
+    -fx-background-color: #222222;
+    -fx-text-fill: #f5a40f;
+}
+
+/* Hover while selected */
+.list-cell:selected:hover {
+    -fx-background-color: #222222;
+    -fx-text-fill: #f5a40f;
+}
+
+/* glowing effect for currently playing song */
+.list-cell.playing {
+    -fx-background-color: #222222;
+    -fx-text-fill: #f5a40f; /* yellow glow text */
+}
